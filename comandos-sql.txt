@@ -1,0 +1,11 @@
+ARQUIVO DESTINADO PARA CRIAÇÃO E MODIFICAÇÃO DAS ENTIDADES;
+
+-- criação da tabela de gastos --
+CREATE TABLE gastos (
+    id UUID PRIMARY KEY,
+    titulo VARCHAR(255),
+    descricao TEXT,
+    data TIMESTAMP NOT NULL,
+    categoria VARCHAR(50) NOT NULL,
+    valor_gasto DECIMAL(19, 2) NOT NULL
+);
