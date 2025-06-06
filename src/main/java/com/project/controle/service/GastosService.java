@@ -38,4 +38,8 @@ public class GastosService {
                 .map(Gastos::getValorGasto)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
+
+    public void excluirGastos(UUID gastosId){
+        repository.deleteById(gastosId);
+    }
 }

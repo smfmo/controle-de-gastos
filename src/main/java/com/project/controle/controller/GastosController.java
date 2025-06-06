@@ -33,4 +33,10 @@ public class GastosController {
         gastosService.salvar(gastos, contaId);
         return "redirect:/controle";
     }
+
+    @PostMapping("/excluir")
+    public String excluir(@RequestParam("id") UUID id){
+        gastosService.excluirGastos(id);
+        return "redirect:/controle";
+    }
 }
