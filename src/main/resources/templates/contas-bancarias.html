@@ -56,9 +56,9 @@
         }
         .tipo-corrente { background-color: #e3f2fd; color: #1976d2; }
         .tipo-poupanca { background-color: #e8f5e9; color: #388e3c; }
-        .tipo-cartao { background-color: #fff3e0; color: #ef6c00; }
-        .tipo-carteira { background-color: #f3e5f5; color: #8e24aa; }
-        .tipo-investimento { background-color: #e0f7fa; color: #00acc1; }
+        .tipo-credito { background-color: #fff3e0; color: #ef6c00; }
+        .tipo-dinheiro { background-color: #f3e5f5; color: #8e24aa; }
+        .tipo-debito { background-color: #e0f7fa; color: #00acc1; }
     </style>
 </head>
 <body>
@@ -109,6 +109,7 @@
                 <i class="bi bi-inbox" style="font-size: 2rem; color: #ddd;"></i>
                 <p class="text-muted mt-2">Nenhuma conta cadastrada</p>
             </div>
+            <a class="btn btn-dark btn-gasto" th:href="@{/controle}">Ir para os meus gastos</a>
         </div>
     </div>
 </div>
