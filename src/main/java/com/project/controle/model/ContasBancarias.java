@@ -26,7 +26,7 @@ public class ContasBancarias {
     @Column(name = "instituicao")
     private String instituicao;
 
-    @OneToMany
+    @OneToMany(mappedBy = "contasBancarias")
     private List<Gastos> gastos = new ArrayList<>();
 
 }

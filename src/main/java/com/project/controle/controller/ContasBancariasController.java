@@ -5,10 +5,9 @@ import com.project.controle.service.ContasBancariasService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/contas")
@@ -29,5 +28,10 @@ public class ContasBancariasController {
         return "redirect:/contas";
     }
 
+    @PostMapping("/excluir")
+    public String excluirConta(@RequestParam("id") UUID id){
+        service.excluirConta(id);
+        return "redirect:/contas";
+    }
 
 }

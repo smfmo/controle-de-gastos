@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -19,5 +20,9 @@ public class ContasBancariasService {
 
     public void cadastrarConta(ContasBancarias conta) {
         repository.save(conta);
+    }
+
+    public void excluirConta(UUID id) {
+        repository.deleteById(id);
     }
 }
