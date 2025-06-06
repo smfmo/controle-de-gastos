@@ -83,6 +83,9 @@
               <small class="valor-gasto"
                      th:text="'Valor: R$ ' + ${#numbers.formatDecimal(gasto.valorGasto, 1, 2, 'POINT')}">
               </small>
+              <small class="text-muted"
+                     th:text="'Conta: ' + ${gasto.contasBancarias.instituicao}">
+              </small>
             </div>
           </div>
           <!--
@@ -133,6 +136,16 @@
               <label class="form-label">Data*</label>
               <input type="datetime-local" class="form-control" name="data" th:value="${#temporals.formatISO(#temporals.createNow())}" required>
             </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Conta*</label>
+            <select class="form-select" name="contaId" required>
+              <option value="">Selecione uma conta</option>
+              <option th:each="conta : ${contas}"
+                      th:value="${conta.id}"
+                      th:text="${conta.nome} + '-' + ${conta.tipo}">
+              </option>
+            </select>
           </div>
           <div class="mb-3">
             <label class="form-label">Categoria*</label>

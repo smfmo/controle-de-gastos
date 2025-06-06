@@ -34,6 +34,6 @@ public class Gastos {
     private BigDecimal valorGasto;
 
     @ManyToOne
-    @JoinColumn(name = "conta_id")
+    @JoinColumn(name = "contas_bancarias_id")
     private ContasBancarias contasBancarias;
 }
