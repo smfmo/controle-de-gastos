@@ -15,7 +15,14 @@
 	<description>aplicação de controle de gastos simples</description>
 
 	<developers>
-		<developer/>
+		<developer>
+			<name>Vinicius Gabriel de Sousa Lima</name>
+			<id>0019307</id>
+		</developer>
+		<developer>
+			<name>Samuel Freitas Moura</name>
+			<id>0019430</id>
+		</developer>
 	</developers>
 
 	<properties>

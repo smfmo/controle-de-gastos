@@ -3,8 +3,6 @@ package com.project.controle.model;
 import com.project.controle.model.Enum.CategoriaGasto;
 import jakarta.persistence.*;
 import lombok.Data;
-
-import javax.naming.Name;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -35,4 +33,7 @@ public class Gastos {
     @Column(name = "valor_gasto")
     private BigDecimal valorGasto;
 
+    @ManyToOne
+    @JoinColumn(name = "conta_id")
+    private ContasBancarias contasBancarias;
 }

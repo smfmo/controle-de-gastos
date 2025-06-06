@@ -19,14 +19,14 @@ public class GastosService {
         return repository.findAll();
     }
 
+    public void salvar(Gastos gasto) {
+        repository.save(gasto);
+    }
+
     public BigDecimal calcularGastos() {
         List<Gastos> gastos = listarGastos();
         return gastos.stream()
                 .map(Gastos::getValorGasto)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
-    }
-
-    public void salvar(Gastos gasto) {
-        repository.save(gasto);
     }
 }
