@@ -19,3 +19,11 @@ CREATE TABLE contas_bancarias (
     tipo VARCHAR(50) NOT NULL,
     instituicao VARCHAR(255)
 );
+
+-- vizualizar tabelas --
+select * from gastos;
+select * from contas_bancarias;
+
+-- deletar tabelas --
+drop table contas_bancarias;
+drop table gastos;
