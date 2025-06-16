@@ -152,7 +152,8 @@
             <select class="form-select" name="categoria" required>
               <option th:each="categoria : ${T(com.project.controle.model.Enum.CategoriaGasto).values()}"
                       th:value="${categoria}"
-                      th:text="${categoria}"></option>
+                      th:text="${categoria}">
+              </option>
             </select>
           </div>
         </div>

@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://database:5432/controleGastos
+    url: jdbc:postgresql://database:5432/Controlegastos
     password: 123456
     username: postgres
   jpa:

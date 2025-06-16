@@ -21,6 +21,7 @@ public class ContasBancarias {
     private String nome;
 
     @Column(name = "tipo")
+    @Enumerated(EnumType.STRING)
     private TiposContas tipo;
 
     @Column(name = "instituicao")
